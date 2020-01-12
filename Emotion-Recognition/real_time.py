@@ -6,11 +6,11 @@ import numpy as np
 
 # parameters for the data
 detection_model_path = 'haarcascade_files/haarcascade_frontalface_default.xml'
-emotion_model_path = 'models/_mini_XCEPTION.102-0.66.hdf5'
+emotion_model_path = 'models/_mini_XCEPTION.73.hdf5'
 
 # bounding boxes shape
 # load the models
-fac_detection = cv2.CascadeClassifier(detection_model_path)
+face_detection = cv2.CascadeClassifier(detection_model_path)
 emotion_classifier = load_model(emotion_model_path, compile=False)
 EMOTIONS = ["angry","disgust","scared","scared","happy","sad","surprised","neutral"]
 
@@ -24,17 +24,18 @@ while True:
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     faces = face_detection.detectMultiScale(gray,scaleFactor=1.1,minNeighbors=5,minSize=(30,30),flags=cv2.CASCADE_SCALE_IMAGE)
 
-    canvas = np.zeros((250, 300, 3), dtype='unit8')
+    canvas = np.zeros((250, 300, 3), dtype='uint8')
     frameClone = frame.copy()
     if len(faces) > 0:
         faces = sorted(faces, reverse=True,
         key=lambda x: (x[2] - x[0])*(x[3]-x[1]))[0]
+        (fX, fY, fW, fH) = faces 
 
         #Extracting the Region Of Interest(ROI) of the face from the grayscale image, resize it to a fixed 28x28 pixel
         #Then the ROI can be send for the classification using the CNN
 
         roi = gray[fY:fY + fH, fX:fX + fW]
-        roi = cv2.resize(roi, (64, 64))
+        roi = cv2.resize(roi, (48, 48))
         roi = roi.astype("float") / 255.0
         roi = img_to_array(roi)
         roi = np.expand_dims(roi, axis=0)
