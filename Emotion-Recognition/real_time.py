@@ -12,10 +12,10 @@ emotion_model_path = 'models/_mini_XCEPTION.73.hdf5'
 # load the models
 face_detection = cv2.CascadeClassifier(detection_model_path)
 emotion_classifier = load_model(emotion_model_path, compile=False)
-EMOTIONS = ["angry","disgust","scared","scared","happy","sad","surprised","neutral"]
+EMOTIONS = ["angry","disgust","fear","happy","sad","surprised","neutral"]
 
 #start video straming
-cv2.namedWindow('Your Ugly Face')
+cv2.namedWindow('Your Face')
 camera = cv2.VideoCapture(0)
 while True:
     frame = camera.read()[1]
