@@ -1,0 +1,139 @@
+
+/* .categorie-item1 img{
+    
+    height: 300px;
+    width: 500px;
+} */
+
+
+
+/* .text-block {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	background-color: black;
+	color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	opacity: 0.7;
+	width: 500px;
+} */
+
+/* .categorie-item1 {
+	margin-bottom: 34px;
+	position: relative;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+	opacity: 0.7;
+	position: relative;
+}
+
+.categorie-item1:hover {
+    opacity: 1;
+} */
+
+html,
+    body {
+        height: 100%;
+		background-color: #2a2727;
+		color: #E5E5E5;
+        font-family: "Raleway", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+    }
+
+
+
+.categorie-item {
+	margin-bottom: 34px;
+	/* background: #edf4f6; */
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+.categorie-item img{
+	width: 100%;
+	height: 250px;
+}
+.set-bg {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+
+.categorie-item .ci-thumb {
+	background-size: cover;
+	height: 148px;
+	-webkit-transition: all 0.2s;
+	-o-transition: all 0.2s;
+	transition: all 0.2s;
+}
+
+.categorie-item .ci-text {
+	padding: 10px 10px;
+}
+
+.categorie-item .ci-text h5 {
+	margin-bottom: 5px;
+}
+
+.categorie-item .ci-text span {
+	font-size: 18px;
+	font-weight: 600;
+	color: #d82a4e;
+}
+
+.categorie-item:hover {
+	transform: scale(1.02);
+	background: #B50404;
+}
+
+.categorie-item:hover .ci-text h5,
+.categorie-item:hover .ci-text p,
+.categorie-item:hover .ci-text span {
+	color: #fff;
+}
+
+.custom-btn:hover {
+	background-color: #FC0000;
+	color: #E5E5E5;
+}
+
+
+/* .container {
+	margin-bottom: 34px;
+	position: relative;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+	opacity: 0.7;
+
+  }
+
+  .container:hover {
+	  opacity: 1;
+  }
+
+
+.container img{
+	height: 300px;
+    width: 500px;
+}
+  
+
+  .text-block {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	background-color: black;
+	color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 20px;
+	opacity: 0.7;
+	width: 500px;
+  } */

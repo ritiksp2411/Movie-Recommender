@@ -1,0 +1,64 @@
+{% extends "base.html" %} {% block content %}
+
+
+
+<h2 style="margin-bottom: 40px;">Result : {{ label }}</h2>
+
+<h2 style="margin-bottom: 30px;">Recommended Movies:</h2>
+
+
+<div class="row">
+    {% for R in r %}
+    <div class="col-lg-4 col-md-6">
+        <div class="categorie-item">
+            <!-- <div class="ci-thumb set-bg" data-setbg="Drishyam-Poster.jpg"></div> -->
+            <img src="{{ R.imglink }}">
+            <div class="ci-text">
+                <h3>{{ R.mname }}</h3>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- <div class="row">
+    {% for R in r %}
+    <div class="col-lg-4 col-md-6">
+        <div class="categorie-item1">
+            <img src="Drishyam-Poster.jpg">
+            <div class="text-block">
+                <h5>{{ R.mid }} </h5>
+                <p>{{ R.mname }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div> -->
+<!-- <div class="row">
+    {% for R in r %}
+    <div class="col-lg-4 col-md-6">
+        <div class="container">
+            <img src="/static/images/Drishyam-Poster.jpg">
+            <div class="text-block">
+            <h4>{{ R.mid }}</h4>
+            <p>{{ R.mname }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% for R in r %}
+
+<h4>{{ R.mid }}</h4>
+<p>{{ R.mname }}</p>
+
+{% endfor %} -->
+
+
+<a href="/"><button type="button" class="btn btn-lg custom-btn" style="margin-bottom: 50px;"
+        id="btn-predict">Home</button></a>
+
+
+
+{% endblock %}
