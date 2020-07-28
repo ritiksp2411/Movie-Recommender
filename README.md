@@ -18,6 +18,6 @@ pip install -r requirements.txt
 
 ### Running Website Locally 
 ```bash
-Set up database 
+Set up database -- mysql -u root -p DB_name < dump.sql
 python main.py 
 ```
